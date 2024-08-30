@@ -357,7 +357,7 @@ void setup() {
   initWiFi();
   //initialize Camera
   // initCamera();
-  //server.serveStatic("/", SPIFFS, "/");
+  server.serveStatic("/", SPIFFS, "/");
   //Route to home page upon request
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     // if(!request-> authenticate(http_username, http_password)){
@@ -380,9 +380,9 @@ void setup() {
 
 
   //Load css file
-  server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/style.css", "text/css");
-  });
+  // server.on("/style.css", HTTP_GET, [](AsyncWebServerRequest *request){
+  //   request->send(SPIFFS, "/style.css", "text/css");
+  // });
 
   //Route to sensor page
   server.on("/sensors",HTTP_GET, [](AsyncWebServerRequest *request){
@@ -439,10 +439,10 @@ void setup() {
     json_data= String();
   });
 
-  //load javascript file
-  server.on("/layout.js", HTTP_GET, [](AsyncWebServerRequest *request){
-    request->send(SPIFFS, "/layout.js", "text/js");
-  });
+  // //load javascript file
+  // server.on("/layout.js", HTTP_GET, [](AsyncWebServerRequest *request){
+  //   request->send(SPIFFS, "/layout.js", "text/js");
+  // });
   //download data in the txt file
   server.on("/download", HTTP_GET, [](AsyncWebServerRequest *request){
     //
@@ -469,7 +469,7 @@ void loop() {
   currentTime = millis();
   if((currentTime-prevTime)>timeOutTime) {
     events.send("ping",NULL,millis());
-    getSensorReadings();
+    // getSensorReadings();
     // events.send((JSON.stringify(readings["temperature"])).c_str(), "temperature", millis());
     // events.send((JSON.stringify(readings["humidity"])).c_str(), "humidity", millis());
     // events.send((JSON.stringify(readings["voltage"])).c_str(), "voltage", millis());
