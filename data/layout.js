@@ -94,11 +94,11 @@ var humGauge = new RadialGauge({
 }).draw();
 
 //create voltage gauge
-var VGauge = new RadialGauge({
+var VoltGauge = new RadialGauge({
   renderTo: "VReading",
   width: 300,
   height: 300,
-  units: " Volatage(V)",
+  units: " Voltage(V)",
   minValue: 0,
   maxValue: 12,
   colorValueBoxRect: "#049faa",
@@ -135,7 +135,7 @@ function getReadings() {
 
       tempGauge.value = temp;
       humGauge.value = hum;
-      VGauge.value = volt;
+      VoltGauge.value = volt;
     }
   };
   xhr.open("GET", "/readings", true);
@@ -180,7 +180,7 @@ if (!!window.EventSource) {
       console.log(myObj);
       tempGauge.value = myObj.temperature;
       humGauge.value = myObj.humidity;
-      VGauge.value = myObj.voltage;
+      VoltGauge.value = myObj.voltage;
     },
     false
   );
