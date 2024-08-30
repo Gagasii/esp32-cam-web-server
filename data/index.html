@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ESP32 WEB SERVER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/logout"><button class="btn1">Logout</button></a>
+      <h1>ESP32 WEB SERVER</h1>
+    </div>
+    <h3>Welcome to the data station!</h3>
+    <div class="container">
+      <img src="/logo" alt="logo" />
+    </div>
+    <div class="row">
+      <div class="column">
+        <div class="container">
+          <p>
+            <a href="/sensors"><button class="btn">Sensor Readings</button></a>
+          </p>
+        </div>
+      </div>
+      <div class="column">
+        <div class="container">
+          <p>
+            <a href="/power"><button class="btn">Power Readings</button></a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p>
+        <a href="/images"><button class="btn">Live Cam</button></a>
+      </p>
+    </div>
+    <div class="footer">
+      <h4>MM</h4>
+    </div>
+    <script src="layout.js"></script>
+  </body>
+</html>

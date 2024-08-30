@@ -1,0 +1,147 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.8rem;
+  color: white;
+}
+h4 {
+  color: white;
+}
+h3 {
+  color: rgb(185, 143, 88);
+  font-size: 1.4rem;
+}
+/* container for button*/
+.container {
+  position: center;
+  width: auto;
+}
+.graph-container {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+/*responsive image*/
+.container img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+.container1 .btn {
+  background-color: rgb(118, 106, 223);
+  color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+.container1 .btn:hover {
+  background-color: bisque;
+}
+.container .btn {
+  background-color: rgb(118, 106, 223);
+  color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.container .btn:hover {
+  background-color: bisque;
+}
+p {
+  font-size: 1.4rem;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(185, 143, 88);
+  text-align: center;
+}
+.topnav1 {
+  overflow: hidden;
+  background-color: rgb(185, 143, 88);
+  text-align: left;
+}
+
+.topnav .btn {
+  background-color: rgb(118, 106, 223);
+  color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+.topnav .btn1:hover {
+  background-color: rgb(118, 106, 223);
+}
+
+.topnav .btn:hover {
+  background-color: bisque;
+}
+.topnav .btn1 {
+  background-color: rgb(236, 15, 15);
+  color: white;
+  font-size: 14px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  overflow: hidden;
+  width: 100%;
+  background-color: rgb(185, 143, 88);
+  text-align: left;
+}
+body {
+  margin: 0;
+}
+.content {
+  padding: 5%;
+}
+.card-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.card {
+  background-color: white;
+  box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, 0.5);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #034078;
+}
+/*flex two columns side by side*/
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column1 {
+  flex: 33.33%;
+  padding: 5px;
+}
+.column {
+  flex: 50%;
+  padding: 5px;
+  align-content: center;
+}
+body {
+  text-align: center;
+}
+.vert {
+  margin-bottom: 10%;
+}
+.hori {
+  margin-bottom: 0%;
+}

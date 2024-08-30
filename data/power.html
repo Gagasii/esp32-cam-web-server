@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sensor Readings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="layout.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/logout"><button class="btn1">Logout</button></a>
+      <h1>Power Readings</h1>
+      <a href="/"> <button class="btn">Home</button></a>
+      <a href="/sensors"><button class="btn">Sensors</button></a>
+      <a href="/images"><button class="btn">Live Cam</button></a>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-title">Voltage Supply</p>
+        <canvas id="VReading"></canvas>
+      </div>
+    </div>
+    <div id="voltChart" class="container"></div>
+    <div class="container">
+      <p>
+        <a href="/download"><button class="btn">Download Data</button> </a>
+      </p>
+    </div>
+    <div class="footer">
+      <h4>MM</h4>
+    </div>
+  </body>
+</html>

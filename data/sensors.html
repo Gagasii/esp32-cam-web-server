@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Sensor Readings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="layout.js"></script>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="/logout"><button class="btn1">Logout</button></a>
+      <h1>Sensor Readings</h1>
+      <a href="/"> <button class="btn">Home</button></a>
+      <a href="/power"><button class="btn">Power</button></a>
+      <a href="/images"><button class="btn">Live Cam</button></a>
+    </div>
+    <div class="content">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Current Temperature</p>
+          <canvas id="TempReading"></canvas>
+        </div>
+        <div class="card">
+          <p class="card-title">Current Humidity</p>
+          <canvas id="HumReading"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Temperature Graph</p>
+          <div id="tempChart" class="graph-container"></div>
+        </div>
+        <div class="card">
+          <p class="card-title">Humidity Graph</p>
+          <div id="humChart" class="graph-container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <p>
+        <a href="/download"><button class="btn">Download Data</button> </a>
+      </p>
+    </div>
+    <div class="footer">
+      <h4>MM</h4>
+    </div>
+  </body>
+</html>

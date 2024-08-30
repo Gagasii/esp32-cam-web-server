@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="layout.js"></script>
+    <title>Image Server</title>
+  </head>
+  <title>Image Server</title>
+  <body>
+    <div class="topnav">
+      <a href="/logout"><button class="btn1">Logout</button></a>
+      <h1>Live Cam</h1>
+      <a href="/"> <button class="btn">Home</button></a>
+      <a href="/power"><button class="btn">Power</button></a>
+      <a href="/sensors"><button class="btn">Sensors</button></a>
+    </div>
+    <div class="container">
+      <div>
+        <img src="saved-photo" id="photo" width="70%" alt="saved-photo" />
+      </div>
+      <p>It might take more than 5 seconds to capture a photo.</p>
+      <a
+        ><button class="btn" onclick="capturePhoto()">Capture & Save</button></a
+      >
+    </div>
+    <div class="footer">
+      <h4>Mguguma.M</h4>
+    </div>
+  </body>
+</html>
