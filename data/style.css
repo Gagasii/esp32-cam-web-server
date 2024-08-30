@@ -98,6 +98,10 @@ p {
   background-color: rgb(185, 143, 88);
   text-align: left;
 }
+.footer .img {
+  width: 50%;
+  height: inherit;
+}
 body {
   margin: 0;
 }

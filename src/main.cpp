@@ -186,10 +186,12 @@ String getSensorReadings(){
   int v=rand()%12+1;
   int t= rand()%55+1;
   int h=rand()%100+1;
+  Serial.println("getting sensor readings");
   readings["temperature"] = String(t);
   readings["humidity"] = String(h);
   readings["voltage"] = String(v);
    String sData = JSON.stringify(readings);
+   Serial.println(sData);
    return sData;
 }
 
@@ -406,6 +408,9 @@ void setup() {
 
   server.on("/logo", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/logo.png", "image/png");
+  });
+  server.on("/uctLogo", HTTP_GET, [](AsyncWebServerRequest *request){
+    request->send(SPIFFS, "/uctLogo.png", "image/png");
   });
   //logout page?? on logout
   server.on("/logout", HTTP_GET, [](AsyncWebServerRequest *request){
