@@ -71,8 +71,8 @@ p {
 .topnav .btn {
   background-color: rgb(118, 106, 223);
   color: white;
-  font-size: 14px;
-  padding: 12px 24px;
+  font-size: 15px;
+  padding: 15px 32px;
   border: none;
   cursor: pointer;
 }
