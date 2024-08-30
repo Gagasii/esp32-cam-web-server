@@ -124,8 +124,8 @@ var VGauge = new RadialGauge({
 }).draw();
 
 function getReadings() {
-  var xhttpr = new XMLHttpRequest();
-  xhttpr.onreadystatechange = function () {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var myObj = JSON.parse(this.responseText);
       console.log(myObj);
@@ -138,8 +138,8 @@ function getReadings() {
       VGauge.value = volt;
     }
   };
-  xhttpr.open("GET", "/readings", true);
-  xhttpr.send();
+  xhr.open("GET", "/readings", true);
+  xhr.send();
 }
 
 //initialize event source protocol and handle events

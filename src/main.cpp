@@ -178,7 +178,7 @@ void formatSPIFFS(){
   if(SPIFFS.format()){
     Serial.println("SPIFFS formated successfully.");
   }else {
-    Serial.println("Errpr formatting SPIFFS.");
+    Serial.println("Error formatting SPIFFS.");
   }
 }
 
@@ -441,6 +441,8 @@ void setup() {
   server.on("/readings", HTTP_GET, [](AsyncWebServerRequest *request){
     String json_data = getSensorReadings();
     request->send(200, "application/json", json_data);
+    Serial.print("Sending data :");
+    Serial.println(json_data);
     json_data= String();
   });
 
