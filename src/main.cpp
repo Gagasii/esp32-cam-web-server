@@ -183,7 +183,7 @@ void formatSPIFFS(){
 }
 
 String getSensorReadings(){
-  int v=(rand()%(144-143+1)+143)/(12);
+  float v=(rand()%(144-143+1)+143)/(12);
   int t= rand()%(20-18+1)+ 18;
   int h=rand()%(93-88+1)+ 88;
   Serial.println("getting sensor readings");
@@ -338,7 +338,7 @@ String readHumidty(){
 
 String readVoltage(){
   //for testing purposes, random generated himidity values
-  int v= (rand()%(144-143+1)+143)/(12);
+  float v= (rand()%(144-143+1)+143)/(12);
   Serial.println(v);
   return String(v);
 }
