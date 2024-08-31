@@ -183,13 +183,27 @@ void formatSPIFFS(){
 }
 
 String getSensorReadings(){
-  int v=rand()%12+1;
-  int t= rand()%55+1;
-  int h=rand()%100+1;
+  int v=rand()%12+10;
+  int t= rand()%55+25;
+  int h=rand()%100+50;
   Serial.println("getting sensor readings");
   readings["temperature"] = String(t);
   readings["humidity"] = String(h);
   readings["voltage"] = String(v);
+  File file = SPIFFS.open("/newData.txt", "w");
+  if (!file) {
+    Serial.println("Failed to open file for writing");
+    return "--";
+  }
+  else{
+    file.print(t);
+    file.print(",");
+    file.print(h);
+    file.print(",");
+    file.print(v);
+    file.println("");
+    file.close();
+  }
    String sData = JSON.stringify(readings);
    Serial.println(sData);
    return sData;
@@ -290,7 +304,8 @@ void captureAndSave(void){
 
 String readTemperature(){
   //for testing purposes, random generated temperature values
-  int t = readings["temperature"];
+
+  int t = rand()%60+25;
   Serial.println(t);
   return String(t);
 }
@@ -306,7 +321,7 @@ String readTemperature(){
 
 String readHumidty(){
   //for testing purposes, random generated himidity values
-  int h= rand()%100+1;
+  int h= rand()%100+50;
   Serial.println(h);
   return String(h);
 }
@@ -323,7 +338,7 @@ String readHumidty(){
 
 String readVoltage(){
   //for testing purposes, random generated himidity values
-  int v= rand()%12+1;
+  int v= rand()%12+10;
   Serial.println(v);
   return String(v);
 }
