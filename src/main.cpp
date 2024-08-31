@@ -427,6 +427,11 @@ void setup() {
     newPhotoTaken= true;
     request->send_P(200, "text/plain", "Taking Photo");
   });
+
+
+  server.on("captured-image", HTTP_GET,[](AsyncWebServerRequest *request){
+    request-> send(SPIFFS, FILE_PHOTO, "image/png", false);
+  });
   
   //send voltage data upon request on the /voltage url for the graphs
   server.on("/voltage", HTTP_GET, [](AsyncWebServerRequest *request){
