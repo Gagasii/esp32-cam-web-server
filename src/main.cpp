@@ -290,7 +290,7 @@ void captureAndSave(void){
 
 String readTemperature(){
   //for testing purposes, random generated temperature values
-  int t = rand()%60+1;
+  int t = readings["temperature"];
   Serial.println(t);
   return String(t);
 }
