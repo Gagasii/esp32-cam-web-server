@@ -183,9 +183,9 @@ void formatSPIFFS(){
 }
 
 String getSensorReadings(){
-  int v=rand()%12+10;
-  int t= rand()%55+25;
-  int h=rand()%100+50;
+  int v=rand()%(12-10+1)+10;
+  int t= rand()%(50-25+1)+25;
+  int h=rand()%(100-50+1)+50;
   Serial.println("getting sensor readings");
   readings["temperature"] = String(t);
   readings["humidity"] = String(h);
@@ -305,7 +305,7 @@ void captureAndSave(void){
 String readTemperature(){
   //for testing purposes, random generated temperature values
 
-  int t = rand()%60+25;
+  int t = rand() % (60 - 25+1)+ 25;
   Serial.println(t);
   return String(t);
 }
@@ -321,7 +321,7 @@ String readTemperature(){
 
 String readHumidty(){
   //for testing purposes, random generated himidity values
-  int h= rand()%100+50;
+  int h= rand()%(100- 50+1)+ 50;
   Serial.println(h);
   return String(h);
 }
@@ -338,7 +338,7 @@ String readHumidty(){
 
 String readVoltage(){
   //for testing purposes, random generated himidity values
-  int v= rand()%12+10;
+  int v= rand()%(12-10+1)+10;
   Serial.println(v);
   return String(v);
 }
