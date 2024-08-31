@@ -387,12 +387,12 @@ void setup() {
   // });
 
   //Route to sensor page
-  server.on("/sensors",HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/data",HTTP_GET, [](AsyncWebServerRequest *request){
     if(log_count<1){
       return request->requestAuthentication();
     }
     else{
-      request->send(SPIFFS, "/sensors.html", "text/html");
+      request->send(SPIFFS, "/data.html", "text/html");
     } 
   });
 
