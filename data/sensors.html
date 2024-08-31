@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sensor Readings</title>
+    <title>Data Readings</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="http://cdn.rawgit.com/Mikhus/canvas-gauges/gh-pages/download/2.1.7/all/gauge.min.js"></script>
@@ -10,9 +10,8 @@
   <body>
     <div class="topnav">
       <a href="/logout"><button class="btn1">Logout</button></a>
-      <h1>Sensor Readings</h1>
+      <h1>Data Readings</h1>
       <a href="/"> <button class="btn">Home</button></a>
-      <a href="/power"><button class="btn">Power</button></a>
       <a href="/images"><button class="btn">Live Cam</button></a>
     </div>
     <div class="content">
@@ -44,6 +43,22 @@
         <div class="card">
           <p class="card-title">Humidity Graph</p>
           <div id="humChart" class="graph-container"></div>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Voltage Supply</p>
+          <canvas id="VReading"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="card-grid">
+        <div class="card">
+          <p class="card-title">Voltage Graph</p>
+          <div id="voltChart" class="graph-container"></div>
         </div>
       </div>
     </div>

@@ -395,16 +395,6 @@ void setup() {
       request->send(SPIFFS, "/sensors.html", "text/html");
     } 
   });
-  //Route to power page
-  server.on("/power",HTTP_GET, [](AsyncWebServerRequest *request){
-    if(log_count<1){
-      return request->requestAuthentication();
-    }
-    else{
-      request->send(SPIFFS, "/power.html", "text/html");
-    }
-    
-  });
 
   server.on("/logo", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/logo.png", "image/png");
