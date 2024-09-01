@@ -292,7 +292,7 @@ void captureAndSave(void){
     else{
       file.write(fb->buf, fb->len);
       Serial.print("the picture has been saved in ");
-      Serial.print(FILE_PHOTO);      
+      Serial.println(FILE_PHOTO);      
     }
     file.close();
     esp_camera_fb_return(fb);
