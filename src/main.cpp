@@ -430,7 +430,7 @@ void setup() {
 
 
   server.on("captured-image", HTTP_GET,[](AsyncWebServerRequest *request){
-    request-> send(SPIFFS, FILE_PHOTO, "image/png", false);
+    request-> send(SPIFFS, FILE_PHOTO, "image/jpg", false);
   });
   
   //send voltage data upon request on the /voltage url for the graphs
