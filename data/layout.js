@@ -197,7 +197,7 @@ if (!!window.EventSource) {
 //Graph for humidity
 var humidityChart = new Highcharts.Chart({
   chart: { renderTo: "humChart" },
-  title: { text: "Humidity" },
+  title: { text: "" },
   series: [
     {
       showInLegend: false,
@@ -241,7 +241,7 @@ setInterval(function () {
 //Graph for Temperature
 var temperatureChart = new Highcharts.Chart({
   chart: { renderTo: "tempChart" },
-  title: { text: "Temperature" },
+  title: { text: "" },
   series: [
     {
       showInLegend: false,
