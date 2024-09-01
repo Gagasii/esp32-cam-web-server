@@ -429,10 +429,13 @@ void setup() {
   });
 
 
-  server.on("captured-image", HTTP_GET,[](AsyncWebServerRequest *request){
+  server.on("/captured-image", HTTP_GET,[](AsyncWebServerRequest *request){
     request-> send(SPIFFS, FILE_PHOTO, "image/jpg", false);
   });
   
+  server.on("picture-download", HTTP_GET, [](AsyncWebServerRequest *request){
+    request-> send(SPIFFS, FILE_PHOTO, "image/jpg", true);
+  });
   //send voltage data upon request on the /voltage url for the graphs
   server.on("/voltage", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send_P(200, "text/plain", readVoltage().c_str());
