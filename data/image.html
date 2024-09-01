@@ -15,27 +15,31 @@
       <a href="/"> <button class="btn">Home</button></a>
       <a href="/data"><button class="btn">Data</button></a>
     </div>
-    <div class="container">
-      <div>
-        <img
-          src="/captured-image"
-          id="photo"
-          width="70%"
-          alt="captured-photo"
-        />
+    <div class="content">
+      <div class="container1">
+        <div>
+          <img
+            src="/captured-image"
+            id="photo"
+            width="70%"
+            alt="captured-photo"
+          />
+        </div>
+        <p>It might take more than 5 seconds to capture a photo.</p>
+        <a
+          ><button class="btn" onclick="capturePhoto()">
+            Capture & Save
+          </button></a
+        >
+        <a
+          ><button class="btn" onclick="location.reload();">
+            reload & view
+          </button></a
+        >
+        <a href="/picture-download"
+          ><button class="btn">Download picture</button></a
+        >
       </div>
-      <p>It might take more than 5 seconds to capture a photo.</p>
-      <a
-        ><button class="btn" onclick="capturePhoto()">Capture & Save</button></a
-      >
-      <a
-        ><button class="btn" onclick="location.reload();">
-          reload & view
-        </button></a
-      >
-      <a href="/picture-download"
-        ><button class="btn">Download picture</button></a
-      >
     </div>
     <div class="footer">
       <img src="uctLogo.png" alt="uctLogo" />

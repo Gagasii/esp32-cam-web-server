@@ -433,7 +433,7 @@ void setup() {
     request-> send(SPIFFS, FILE_PHOTO, "image/jpg", false);
   });
   
-  server.on("picture-download", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/picture-download", HTTP_GET, [](AsyncWebServerRequest *request){
     request-> send(SPIFFS, FILE_PHOTO, "image/jpg", true);
   });
   //send voltage data upon request on the /voltage url for the graphs

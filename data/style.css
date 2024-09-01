@@ -30,6 +30,10 @@ h2 {
   height: 20%;
   border-radius: 50%;
 }
+.container1 img {
+  width: 20%;
+  height: 20%;
+}
 .container1 .btn {
   background-color: rgb(118, 106, 223);
   color: white;
