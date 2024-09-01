@@ -420,7 +420,7 @@ void setup() {
   //logout page?? on logout
   server.on("/logout", HTTP_GET, [](AsyncWebServerRequest *request){
     log_count=log_count-1;
-    request->send(401);
+    request->send(SPIFFS, "/login.html", "text/html");
   });
 
   server.on("/capture", HTTP_GET, [](AsyncWebServerRequest *request){
