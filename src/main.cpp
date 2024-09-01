@@ -373,7 +373,7 @@ void setup() {
   //initialize WiFi
   initWiFi();
   //initialize Camera
-  // initCamera();
+  initCamera();
   server.serveStatic("/", SPIFFS, "/");
   //Route to home page upon request
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
@@ -493,6 +493,12 @@ void loop() {
     events.send(getSensorReadings().c_str(), "new_readings", millis());
     prevTime= millis();
   }
+
+  if(newPhotoTaken){
+    captureAndSave();
+    newPhotoTaken=false;
+  }
+  delay(1);
   
 }
 
