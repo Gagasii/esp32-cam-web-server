@@ -31,8 +31,8 @@ h2 {
   border-radius: 50%;
 }
 .container1 img {
-  width: 20%;
-  height: 20%;
+  width: 40%;
+  height: 40%;
 }
 .container1 .btn {
   background-color: rgb(118, 106, 223);
@@ -103,7 +103,7 @@ p {
   text-align: left;
 }
 .footer .img {
-  width: 50%;
+  width: 60%;
   height: inherit;
 }
 body {
