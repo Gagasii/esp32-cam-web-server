@@ -4,15 +4,17 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 ## Features
 
--Uses web-server hosted by the ESP32-cam
+-Uses web-server hosted by the ESP32-cam.
 
--Easily accessible using any device with WiFi
+-Easily accessible using any device with WiFi.
 
--Cross-platform compatibility, a web application can be acces by any device that has a web browser
+-Cross-platform compatibility, a web application can be acces by any device that has a web browser.
 
 -Allow the user to view real time nest data captured by the sensing module.
 
 -Can connect up to 10m.
+
+-Has user authentication for system security.
 
 -Allows user to download data stored in the Esp32-cam memory.
 
@@ -20,9 +22,9 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 -Well documented software was used , namely javascript, html, css.
 
--Uses the AsyncWebServer library for the webserver
+-Uses the AsyncWebServer library for the webserver.
 
--Uses SPIFFS filesytem to store the files
+-Uses SPIFFS filesytem to store the files and data.
 
 ## Testing
 
@@ -35,3 +37,5 @@ The implementation of a User interface for monitoring and studying the Southern 
 ## Conclusion
 
 -The User interface allows the user to acces the system data wirelessly.
+
+-It has a simple and easy to learn layout.
