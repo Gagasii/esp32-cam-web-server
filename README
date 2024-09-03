@@ -1,8 +1,8 @@
-##User Interface and Data retrival
+## User Interface and Data retrival
 
 The implementation of a User interface for monitoring and studying the Southern Yellow-billed hornbills in the kalahari. Desert.
 
-##Features
+## Features
 
 -Uses web-server hosted by the ESP32-cam
 -Easily accessible using any device with WiFi
@@ -11,18 +11,18 @@ The implementation of a User interface for monitoring and studying the Southern 
 -Can connect up to 10m.
 -Allows user to download data stored in the Esp32-cam memory.
 
-##Software and required libraries
+## Software and required libraries
 
--well documented software was used , namely javascript, html, css.
+-Well documented software was used , namely javascript, html, css.
 -Uses the AsyncWebServer library for the webserver
 -uses SPIFFS filesytem to store the files
 
-##Testing
+## Testing
 
 -perfomance testing, by connecting mulltiple uses and gauging system response.
 -data download, tested if user can download the system data through the user imterface.
 -view system data, tested if the user can view system data.
 
-##Conclusion
+## Conclusion
 
 The User interface allows the user to acces the system data wirelessly.
