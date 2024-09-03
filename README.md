@@ -8,7 +8,7 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 -Easily accessible using any device with WiFi
 
--Cross-platform comatibility, a web application can be acces by any device that has a web browser
+-Cross-platform compatibility, a web application can be acces by any device that has a web browser
 
 -Allow the user to view real time nest data captured by the sensing module.
 
