@@ -210,7 +210,6 @@ String getSensorReadings(){
 }
 
 // String getSensorReadings(){
-//   //for testing purposes, random generated values
 //   float h1 = dht1.readHumidity();
 //   float t1=dht1.readTemperature();
 //   float h2 =dht2.readHumidity() ;
@@ -304,20 +303,19 @@ void captureAndSave(void){
 
 String readTemperature(){
   //for testing purposes, random generated temperature values
-
   int t = rand() % (20-18+1)+ 18;
   Serial.println(t);
   return String(t);
 }
-// String readTemperature(){
-//   float t1=dht1.readTemperature();
-//   float t2 = dht2.readTemperature();
-//   float avgTemp = (t1 + t2)/2;
-//   float filteredTemperature = kf_temp.updateEstimate(avgTemp);
-//   float temp = filteredTemperature*100;
-//   Serial.println(temp);
-//   return String(temp);
-// }
+String getTemperature(){
+  float t1=dht1.readTemperature();
+  float t2 = dht2.readTemperature();
+  float avgTemp = (t1 + t2)/2;
+  float filteredTemperature = kf_temp.updateEstimate(avgTemp);
+  float temp = filteredTemperature*100;
+  Serial.println(temp);
+  return String(temp);
+}
 
 String readHumidty(){
   //for testing purposes, random generated himidity values
@@ -326,15 +324,15 @@ String readHumidty(){
   return String(h);
 }
 
-// String readHumidty(){
-//   float h1 = dht1.readHumidity();
-//   float h2 =dht2.readHumidity() ;
-//   float avgHum = (h1 + h2)/2;
-//   float filteredHumidity = kf_hum.updateEstimate(avgHum);
-//   float hum = filteredHumidity*100;
-//   Serial.println(hum);
-//   return String(hum);
-// }
+String getHumidty(){
+  float h1 = dht1.readHumidity();
+  float h2 =dht2.readHumidity() ;
+  float avgHum = (h1 + h2)/2;
+  float filteredHumidity = kf_hum.updateEstimate(avgHum);
+  float hum = filteredHumidity*100;
+  Serial.println(hum);
+  return String(hum);
+}
 
 String readVoltage(){
   //for testing purposes, random generated himidity values
@@ -342,20 +340,14 @@ String readVoltage(){
   Serial.println(v);
   return String(v);
 }
-// String readVoltage(){
-//   int analogValue = analogRead(14);
-//   float voltage = (float)analogValue * (10.74/4095) + 1.27;
-//   float filteredVoltage = kf_volt.updateEstimate(voltage);
-//   float volt = filteredVoltage*100;
-//   Serial.println(volt);
-//   return String(volt);
-// }
-/*String readCurrent(){
-  //for testing purposes, random generated himidity values
-  int c= rand()%3+1;
-  Serial.println(c);
-  return String(c);
-}*/
+String getVoltage(){
+  int analogValue = analogRead(14);
+  float voltage = (float)analogValue * (10.74/4095) + 1.27;
+  float filteredVoltage = kf_volt.updateEstimate(voltage);
+  float volt = filteredVoltage*100;
+  Serial.println(volt);
+  return String(volt);
+}
 
 void setup() {
   // Setup code
