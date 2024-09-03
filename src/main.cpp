@@ -376,10 +376,10 @@ void setup() {
   initCamera();
   server.serveStatic("/", SPIFFS, "/");
   //Route to home page upon request
-  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    // if(!request-> authenticate(http_username, http_password)){
-    //   return request->requestAuthentication();
-    // }
+  server.on("/home", HTTP_GET, [](AsyncWebServerRequest *request){
+    if(!request-> authenticate(http_username, http_password)){
+      return request->requestAuthentication();
+    }
     log_count=log_count+1;
     request->send(SPIFFS, "/index.html", "text/html");
 
@@ -418,7 +418,7 @@ void setup() {
     request->send(SPIFFS, "/uctLogo.png", "image/png");
   });
   //logout page?? on logout
-  server.on("/logout", HTTP_GET, [](AsyncWebServerRequest *request){
+  server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     log_count=log_count-1;
     request->send(SPIFFS, "/login.html", "text/html");
   });
