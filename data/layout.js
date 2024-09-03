@@ -1,7 +1,6 @@
 // Get current sensor readings when the page loads and initialize websocket
 window.addEventListener("load", getReadings);
 
-//ws.addEventListener("load", );
 // Create Temperature Gauge
 var tempGauge = new LinearGauge({
   renderTo: "TempReading",
@@ -129,7 +128,7 @@ var voltGauge = new RadialGauge({
   animationDuration: 1500,
   animationRule: "linear",
 }).draw();
-
+// Get data readings from server response
 function getReadings() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {

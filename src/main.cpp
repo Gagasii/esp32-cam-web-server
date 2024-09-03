@@ -402,29 +402,29 @@ void setup() {
       request->send(SPIFFS, "/data.html", "text/html");
     } 
   });
-
+  // send logo
   server.on("/logo", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/logo.png", "image/png");
   });
   server.on("/uctLogo", HTTP_GET, [](AsyncWebServerRequest *request){
     request->send(SPIFFS, "/uctLogo.png", "image/png");
   });
-  //logout page?? on logout
+  //logout page on logout
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
     log_count=log_count-1;
     request->send(SPIFFS, "/login.html", "text/html");
   });
-
+  //take a picture on capture request
   server.on("/capture", HTTP_GET, [](AsyncWebServerRequest *request){
     newPhotoTaken= true;
     request->send_P(200, "text/plain", "Taking Photo");
   });
 
-
+  //send image upon request for the user to view on the web App
   server.on("/captured-image", HTTP_GET,[](AsyncWebServerRequest *request){
     request-> send(SPIFFS, FILE_PHOTO, "image/jpg", false);
   });
-  
+  //send image upon request for download
   server.on("/picture-download", HTTP_GET, [](AsyncWebServerRequest *request){
     request-> send(SPIFFS, FILE_PHOTO, "image/jpg", true);
   });
@@ -477,7 +477,6 @@ void setup() {
 
 void loop() {
   //send events to the client every 30 seconds
-  //ws.cleanupClients();
   currentTime = millis();
   if((currentTime-prevTime)>timeOutTime) {
     events.send("ping",NULL,millis());
@@ -488,7 +487,7 @@ void loop() {
     events.send(getSensorReadings().c_str(), "new_readings", millis());
     prevTime= millis();
   }
-
+  //take picture upon button press
   if(newPhotoTaken){
     captureAndSave();
     newPhotoTaken=false;
