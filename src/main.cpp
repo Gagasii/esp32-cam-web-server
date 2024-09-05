@@ -411,8 +411,14 @@ void setup() {
   });
   //logout page on logout
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    log_count=log_count-1;
-    request->send(SPIFFS, "/login.html", "text/html");
+    if(log_count==0){
+      request->send(SPIFFS, "/login.html", "text/html");
+    }else{
+      log_count=log_count-1;
+      request->send(SPIFFS, "/login.html", "text/html");
+    }
+    
+    
   });
   //take a picture on capture request
   server.on("/capture", HTTP_GET, [](AsyncWebServerRequest *request){
