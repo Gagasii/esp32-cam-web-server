@@ -202,7 +202,7 @@ String getSensorReadings(){
     file.print(",");
     file.print(v);
     file.println("");
-    file.close();
+    //file.close();
   }
    String sData = JSON.stringify(readings);
    Serial.println(sData);
