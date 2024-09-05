@@ -15,6 +15,9 @@ h2 {
   color: rgb(185, 143, 88);
   font-size: 1.6rem;
 }
+p {
+  color: rgb(185, 143, 88);
+}
 /* container for button*/
 .container {
   position: center;
