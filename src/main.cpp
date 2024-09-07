@@ -190,7 +190,7 @@ String getSensorReadings(){
   readings["temperature"] = String(t);
   readings["humidity"] = String(h);
   readings["voltage"] = String(v);
-  File file = SPIFFS.open("/data.txt", "w");
+  File file = SPIFFS.open("/data.txt", "a");
   if (!file) {
     Serial.println("Failed to open file for writing");
     return "--";
