@@ -202,7 +202,7 @@ String getSensorReadings(){
     file.print(",");
     file.print(v);
     file.println("");
-    //file.close();
+    file.close();
   }
    String sData = JSON.stringify(readings);
    Serial.println(sData);
@@ -232,7 +232,7 @@ String getSensorReadings(){
 //   int temperatureInteger = (int)temp;
 //   int humidityInteger = (int)hum;
 //   int voltageInteger = (int)volt;
-//   File file = SPIFFS.open("/data.txt", "w");
+//   File file = SPIFFS.open("/data.txt", "a");
 //   if (!file) {
 //     Serial.println("Failed to open file for writing");
 //     return "--";
