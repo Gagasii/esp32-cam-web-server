@@ -4,19 +4,17 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 ## Features
 
--Uses web-server hosted by the ESP32-cam.
+-**Web Server Integration**: Hosted on an ESP32-CAM, enabling efficient and localized data management.
 
--Easily accessible using any device with WiFi.
+-**Wi-Fi Accessibility**: Easily accessible via any device with Wi-Fi capabilities.
 
--Cross-platform compatibility, a web application can be acces by any device that has a web browser.
+-**Cross-Platform Compatibility**: Operates as a web application accessible on any device with a web browser, regardless of the operating system.
 
--Allow the user to view real time nest data captured by the sensing module.
+-**Real-Time Data Monitoring**: Provides live updates on nest data captured by the sensing module.
 
--Can connect up to 10m.
+-**Secure Connectivity**: Supports connections up to 10 meters with user authentication to ensure system security.
 
--Has user authentication for system security.
-
--Allows user to download data stored in the Esp32-cam memory.
+-**Data Download Feature**: Allows users to download stored data directly from the ESP32-CAM's memory.
 
 ## Software and required libraries
 
@@ -28,14 +26,11 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 ## Testing
 
--Perfomance testing, by connecting mulltiple uses and gauging system response.
+-**Performance Testing**: Evaluated system responsiveness by connecting multiple users simultaneously to assess its ability to handle concurrent access.
 
--Data download, tested if user can download the system data through the user imterface.
+-**Data Download Testing**: Verified that users can successfully download system data through the user interface without errors or interruptions.
 
--View system data, tested if the user can view system data.
+-**Data Viewing Testing**: Ensured that users can reliably view and access real-time and stored system data through the interface.
 
 ## Conclusion
-
--The User interface allows the user to acces the system data wirelessly.
-
--It has a simple and easy to learn layout.
+The implementation of the user interface for monitoring and studying Southern Yellow-billed Hornbills in the Kalahari Desert provides an efficient and wireless way for users to access system data. Its intuitive and user-friendly design ensures that researchers can easily navigate the interface, enhancing productivity and reducing the learning curve. This interface serves as a valuable tool for promoting effective wildlife observation and data analysis in the field.
