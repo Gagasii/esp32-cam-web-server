@@ -4,25 +4,29 @@ The implementation of a User interface for monitoring and studying the Southern 
 
 ## Features
 
--**Web Server Integration**: Hosted on an ESP32-CAM, enabling efficient and localized data management.
+* **Web Server Integration**: Hosted on an ESP32-CAM, enabling efficient and localized data management.
 
--**Wi-Fi Accessibility**: Easily accessible via any device with Wi-Fi capabilities.
+* **Wi-Fi Accessibility**: Easily accessible via any device with Wi-Fi capabilities.
 
--**Cross-Platform Compatibility**: Operates as a web application accessible on any device with a web browser, regardless of the operating system.
+* **Cross-Platform Compatibility**: Operates as a web application accessible on any device with a web browser, regardless of the operating system.
 
--**Real-Time Data Monitoring**: Provides live updates on nest data captured by the sensing module.
+* **Real-Time Data Monitoring**: Provides live updates on nest data captured by the sensing module.
 
--**Secure Connectivity**: Supports connections up to 10 meters with user authentication to ensure system security.
+* **Secure Connectivity**: Supports connections up to 10 meters with user authentication to ensure system security.
 
--**Data Download Feature**: Allows users to download stored data directly from the ESP32-CAM's memory.
+* **Data Download Feature**: Allows users to download stored data directly from the ESP32-CAM's memory.
 
 ## Software and required libraries
 
--Well documented software was used , namely javascript, html, css.
+* Well documented software was used , namely javascript, html, css.
 
--Uses the AsyncWebServer library for the webserver.
+* Uses the AsyncWebServer library for the webserver.
 
--Uses SPIFFS filesytem to store the files and data.
+* Uses SPIFFS filesytem to store the files and data.
+
+## Hardware requirements
+* Esp32-cam
+* DHT22 sensor
 
 ## Testing
 
